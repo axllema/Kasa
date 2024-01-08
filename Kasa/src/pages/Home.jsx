@@ -1,16 +1,12 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import '../styles/main.scss'
-
-const router = createBrowserRouter([
-    {
-    path : '/',
-    element: <div> Salut </div>
-    }
-])
+import React from 'react';
 
 
-function App() {
-    return <RouterProvider router={router} />
+function Home() {
+    return (
+    <div>
+        <h2>Salut</h2>
+    </div>
+    );
 }
 
-export default App
+export default Home;

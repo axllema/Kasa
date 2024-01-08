@@ -1,9 +1,11 @@
-/* import React from 'react'
+ import React from 'react';
 
 function About() {
     return (
-        <div>About</div>
-    )
+    <div>
+        <h2>About Page</h2>
+    </div>
+    );
 }
 
-export default About */
+export default About;
