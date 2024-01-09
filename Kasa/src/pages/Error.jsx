@@ -1,6 +1,6 @@
 
 
-function NotFound() {
+function Error() {
     return (
     <div>
         <h2>404 - </h2>
@@ -8,4 +8,4 @@ function NotFound() {
     );
 }
 
-export default NotFound 
+export default Error
