@@ -1,0 +1,18 @@
+@import "utils/_extends";
+@import "utils/_mixins";
+@import "utils/_variables";
+
+@import "base/_base.scss";
+
+@import "layout/_footer";
+@import "layout/_header";
+
+@import "components/_banner";
+@import "components/_cards";
+@import "components/_carrousel";
+
+@import "pages/_home";
+@import "pages/_about";
+@import "pages/_accomodations";
+@import "pages/_error";
+

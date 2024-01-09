@@ -5,6 +5,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Accommodations from './pages/Accommodations';
 import Error from './pages/Error';
+import './scss/style.scss';
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
