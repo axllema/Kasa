@@ -1,7 +1,7 @@
 .gallery {
     display: flex;
     justify-content: center;
-    padding: 30px 65px;
+    padding: 30px 65px 0px 65px;
 
     .accommodations_list {
         display: flex;
@@ -12,13 +12,13 @@
             justify-content: center;
             flex-wrap: wrap;
             background-color: #f6f6f6;
-            gap: 10px 65px;
+            gap: 30px 65px;
             padding: 50px 80px;
             list-style-type: none;
 
             li {
                 position: relative;
-                height: 340px;
+                height: 280px;
                 width: 340px;
                 object-fit: cover;
 
@@ -27,7 +27,7 @@
                     font-size: 18px;
                     font-weight: 500;
                     color: white;
-                    bottom: 75px;
+                    bottom: 20px;
                     left: 15px;
                 }
             }
