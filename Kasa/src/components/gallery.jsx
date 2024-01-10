@@ -3,7 +3,7 @@ import CardsList from '../components/cards';
 
 function Gallery() {
     return (
-        <div>
+        <div className="gallery">
             <CardsList />
         </div>
     );

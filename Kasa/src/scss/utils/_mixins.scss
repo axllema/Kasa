@@ -1,0 +1,60 @@
+/*  Fonts : family, size & weight */
+@mixin typography($family: $main-font, $size: 16px, $weight: $regular) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+/*  For "display : flex", so that there is less repetition
+@mixin flex($direction: initial, $justify: initial, $align: initial, $gap: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+*/
+
+/* Media Queries 
+@mixin mobile {
+    @media (min-width: 375px) {
+        @content;
+    }
+}
+
+@mixin mobile-medium {
+    @media (min-width: 420px) {
+        @content;
+    }
+}
+
+@mixin mobile-bigger {
+    @media (min-width: 460px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1024px) {
+        @content;
+}
+}
+
+@mixin desktop-large {
+    @media (min-width: 1440px) {
+        @content;
+    }
+}
+
+@mixin desktop-superlarge {
+    @media (min-width: 1600px) {
+        @content;
+    }
+}
+*/

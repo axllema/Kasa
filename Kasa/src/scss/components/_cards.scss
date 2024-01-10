@@ -1,4 +1,9 @@
-.accommodations_list {
+.gallery {
+    display: flex;
+    justify-content: center;
+    padding: 30px 65px;
+
+    .accommodations_list {
     display: flex;
     justify-content: center; 
 
@@ -15,8 +20,8 @@
         height: 340px;
         width: 340px;
         height: 100%;
-        width: 100%;
         border-radius: 10px;
-                }
+        }
+    }
     }
 }
