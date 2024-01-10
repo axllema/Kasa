@@ -1,12 +1,13 @@
 import React from 'react';
-
-
+/* import Header from '../components/header';
+import Footer from '../components/footer'; */
+import Gallery from '../components/gallery';
 
 function Home() {
     return (
-    <div className='try'>
-        <h2>Salut</h2>
-    </div>
+        <div>
+        <Gallery />
+        </div>
     );
 }
 
