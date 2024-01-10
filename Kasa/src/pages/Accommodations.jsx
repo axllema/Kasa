@@ -1,6 +1,4 @@
-
-
-function Accomodations() {
+function Accommodations() {
     return (
     <div>
         <h2> Accomodations </h2>
@@ -8,4 +6,4 @@ function Accomodations() {
     );
 }
 
-export default Accomodations
+export default Accommodations
