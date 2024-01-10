@@ -13,7 +13,7 @@ function Card({ id, title, cover }) {
             {/* displaying the cover image with alt text as the title */}
             <img src={cover} alt={title} />
             {/* displaying the title of the accommodation */}
-            {title}
+            <span className="card-title">{title}</span>
         </li>
     );
 }
