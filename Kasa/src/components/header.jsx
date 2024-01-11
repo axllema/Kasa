@@ -6,7 +6,9 @@ import '../scss/layout/_header.scss';
 
 function Header () {
     return <div className="header">
-            <img alt="logo" src={logo}></img>
+            <Link to="/">
+                <img alt="logo" src={logo} />
+            </Link>
             <nav>
                 <Link to="/">Accueil</Link>
                 <Link to="/about">A propos</Link>
