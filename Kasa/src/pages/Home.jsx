@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Gallery from '../components/gallery';
