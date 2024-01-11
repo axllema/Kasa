@@ -14,7 +14,6 @@ function Error() {
                 {/* &rsquo; because ' wouldn't work */}
                 <Link className='error_return' to="/"> Retourner sur la page d&rsquo;accueil</Link>
             </div>
-            {/* Mettez le Footer ici à l'extérieur de la div 'error' */}
             <Footer />
         </div>
     );

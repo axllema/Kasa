@@ -19,7 +19,17 @@
         padding-bottom: 80px;
     }
 
-    .return {
+    .error_return {
         text-align: center;
+        font-size: 15px;
+        padding-bottom: 130px;
+        text-decoration: underline;
+
+        &:hover {
+            font-size: 16px;
+            text-decoration: none; 
+            padding-bottom: 129px;
+            font-weight: 500;
+        }
     }
 }
