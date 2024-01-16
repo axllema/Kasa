@@ -1,25 +1,27 @@
-import * as React from 'react';
+/* import React, { useState } from 'react';
+import PropTypes from 'prop-types';
 
-/* EXEMPLE DE COLLAPSE !! 
-quand cliquer sur description / equipement dans une page logement
+const Collapse = ({ isOpen, children }) => {
+const [isCollapsed, setIsCollapsed] = useState(isOpen);
 
-import React, { useState } from 'react';
-
-const CollapseExample = () => {
-    const [isCollapsed, setIsCollapsed] = useState(true);
-
-    const toggleCollapse = () => {
-        setIsCollapsed(!isCollapsed);
-    };
-
-    return (
-        <div>
-            <button onClick={toggleCollapse}>
-        {isCollapsed ? 'Expand' : 'Collapse'}
-            </button>
-        {!isCollapsed && <div>Contenu à afficher lorsque déplié.</div>}
-        </div>
-    );
+const toggleCollapse = () => {
+setIsCollapsed(!isCollapsed);
 };
 
-export default CollapseExample; */
+return (
+<div>
+    <button onClick={toggleCollapse}>
+    {isCollapsed ? 'Expand' : 'Collapse'}
+    </button>
+    {!isCollapsed && <div>{children}</div>}
+</div>
+);
+};
+
+Collapse.propTypes = {
+isOpen: PropTypes.bool.isRequired,
+children: PropTypes.node.isRequired,
+};
+
+export default Collapse;
+*/
