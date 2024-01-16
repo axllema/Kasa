@@ -1,10 +1,10 @@
 import * as React from 'react';
-import whiteLogo from '../assets/logo-white.png'
+import Logo from '../components/logo';
 import '../scss/layout/_footer.scss';
 
 function Footer () {
     return <div className="footer">
-                <img alt="Kasa logo in white" src={whiteLogo}></img>
+                <Logo />
                 <span>© 2020 Kasa. All rights reserved</span>
             </div>
 }
