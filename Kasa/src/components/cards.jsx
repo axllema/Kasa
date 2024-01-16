@@ -25,5 +25,3 @@ Card.propTypes = {
 };
 
 export default Card;
-
-/* trye */
