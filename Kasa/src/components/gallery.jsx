@@ -4,11 +4,11 @@ import '../scss/components/_gallery.scss';
 
 function Gallery() {
     return (
-       /* <div className='gallery_container'> */
-    <div className="gallery">
-        <CardsList />
-    </div>
-  /*   </div>*/
+        <div className='gallery-container'>
+            <div className="gallery">
+            <CardsList />
+            </div>
+        </div>
     );
 }
 
