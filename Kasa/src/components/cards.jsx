@@ -14,6 +14,7 @@ function Card({ id, title, cover }) {
         <div className="gallery_list_item" key={id} onClick={handleClick}>
             <img className="gallery_list_item_image" src={cover} alt={title} />
             <span className="gallery_list_item_title">{title}</span>
+            <div className='orange-overlay'> </div>
         </div>
     );
 }

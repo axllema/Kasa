@@ -2,9 +2,10 @@
     display: flex;
     justify-content: center;
     background-color: #f6f6f6;
-    padding: 40px 0;
-    margin: 40px 160px;
+    margin: 40px auto;
+    padding: 30px 0 30px 0;
     border-radius: 30px;
+    max-width: 1300px;
 }
 
 .gallery {
@@ -14,16 +15,18 @@
     &_list {
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         align-items: center;
-        width: 80%;
+        width: 100%;
+        max-width: 1300px;
+        margin: 0 auto;
 
         &_item {
+            justify-content: center;
             position: relative;
             height: 280px;
             width: 340px;
-            object-fit: cover;
             margin: 0 15px 30px 15px;
-            
 
             &_title {
                 position: absolute;
@@ -32,13 +35,30 @@
                 color: white;
                 bottom: 20px;
                 left: 15px;
+                z-index: 5;
             }
 
             &_image {
                 width: 100%;
                 height: 275px;
                 border-radius: 5px;
-            
+            }
         }
     }
-}}
+}
+
+.orange-overlay {
+    background-color: #ff6060;
+    z-index: 3;
+    position: absolute;
+    width: 100%;
+    height: 275px;
+    border-radius: 5px;
+    top: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+
+    &:hover {
+        opacity: 0.50;
+    }
+}

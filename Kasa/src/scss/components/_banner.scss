@@ -2,14 +2,15 @@
     display: flex;
     justify-content: center;
     position: relative;
-    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
     object-fit: fill;
 
     img {
-        width: 80%;
         border-radius: 30px;
         height: 190px;
         filter: brightness(70%);
+        max-width: 1300px;
     }
 
     span {
@@ -18,5 +19,6 @@
         color: white;
         font-weight: 500;
         font-size: 25px;
+        transform: translateY(-50%);
     }
 }
