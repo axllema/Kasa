@@ -36,6 +36,7 @@ function AccommodationsPage() {
                     equipments={selectedAccommodation.equipments}
                     host={selectedAccommodation.host}
                     rating={selectedAccommodation.rating}
+                    location={selectedAccommodation.location}
                 />
                 <Footer />
             </div>

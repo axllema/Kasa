@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from '../components/collapse';
 
-const Accommodation = ({ title, cover, tags, description, equipments, host, rating }) => {
+const Accommodation = ({ title, location, cover, tags, description, equipments, host, rating }) => {
     const [descriptionCollapsed, setDescriptionCollapsed] = useState(true);
     const [equipmentsCollapsed, setEquipmentsCollapsed] = useState(true);
 
@@ -10,6 +10,7 @@ const Accommodation = ({ title, cover, tags, description, equipments, host, rati
         <div className="accommodation">
             <img src={cover} alt={title} />
             <h2>{title}</h2>
+            <p>{location}</p>
             <p>{tags.join(', ')}</p>
             <p>{host.name}</p>
             <img src={host.picture} alt={host.name} />
@@ -43,6 +44,7 @@ Accommodation.propTypes = {
             picture: PropTypes.string.isRequired,
         }).isRequired,
     rating: PropTypes.string.isRequired,
+    location : PropTypes.string.isRequired
 };
 
 export default Accommodation;
