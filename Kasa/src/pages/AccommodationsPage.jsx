@@ -11,7 +11,7 @@ function AccommodationsPage() {
     // gets the 'navigate' function from the react-router-dom
     const navigate = useNavigate();
 
-    // fins the accommodation with the matching id from the list
+    // finds the accommodation with the matching id from the list
     const selectedAccommodation = accommodationsList.find((acc) => acc.id === id);
 
     // uses useEffect to perform side effects after rendering
@@ -34,11 +34,13 @@ function AccommodationsPage() {
                     tags={selectedAccommodation.tags}
                     description={selectedAccommodation.description}
                     equipments={selectedAccommodation.equipments}
+                    host={selectedAccommodation.host}
+                    rating={selectedAccommodation.rating}
                 />
                 <Footer />
             </div>
         );
-}
+    }
 }
 
 export default AccommodationsPage;
