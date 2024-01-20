@@ -39,9 +39,9 @@ Accommodation.propTypes = {
     description: PropTypes.string.isRequired,
     equipments: PropTypes.arrayOf(PropTypes.string).isRequired,
     host: PropTypes.shape({
-        name: PropTypes.string.isRequired,
-        picture: PropTypes.string.isRequired,
-    }).isRequired,
+            name: PropTypes.string.isRequired,
+            picture: PropTypes.string.isRequired,
+        }).isRequired,
     rating: PropTypes.string.isRequired,
 };
 
