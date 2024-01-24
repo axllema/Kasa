@@ -6,10 +6,15 @@ const Carrousel = ({ pictures }) => {
     // states to keep track of the current picture index
     const [currentPictureIndex, setCurrentPictureIndex] = useState(0);
 
-    // function to go to the next picture
-    const nextPicture = () => {
-        setCurrentPictureIndex((prevIndex) => (prevIndex + 1) % pictures.length);
-    };
+   // function to go to the next picture
+const nextPicture = () => {
+    // setCurrentPictureIndex is a function from the useState hook to update the state
+    setCurrentPictureIndex((prevIndex) => (prevIndex + 1) % pictures.length);
+    // the function takes the previous index (prevIndex) and increments it by 1
+    // if the result is equal to pictures.length, it wraps around to 0 using the modulus operator (%)
+    // this way, it creates a looping effect, allowing the carousel to cycle through pictures
+};
+
 
     // function to go to the previous picture
     const prevPicture = () => {
