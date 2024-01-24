@@ -8,6 +8,7 @@ import Footer from '../components/footer';
 function Home() {
     return (
         <div>
+            {/* <Loader /> */}
             <Header /> 
             <Banner showSecond={false} showFirst={true} /> 
             {/* renders Banner component with showSecond set to false and showFirst set to true */}
