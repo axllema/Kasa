@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from '../components/collapse';
+import StarRating from '../components/starRating';
 
 // defines the Accommodation component
 const Accommodation = ({ title, location, cover, tags, description, equipments, host, rating }) => {
@@ -16,8 +17,10 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             <p>{location}</p>
             <p>{tags.join(', ')}</p>
             <p className='hostName'>{host.name}</p>
-            <img src={host.picture} alt={host.name} />
+            <img src={host.picture} alt={host.name}/>
             <p>{rating}</p>
+            {/*  <StarRating/> */}
+
 
             {/* button to toggle visibility of description */}
             <button onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>

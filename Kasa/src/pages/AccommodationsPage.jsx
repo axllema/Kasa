@@ -5,6 +5,7 @@ import Header from '../components/header';
 import Accommodation from '../components/accommodation';
 import Carrousel from '../components/carrousel';
 import Footer from '../components/footer';
+import '../scss/pages/_accommodations.scss'
 
 // defines the functional component for the AccommodationsPage
 function AccommodationsPage() {
