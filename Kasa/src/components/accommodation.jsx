@@ -17,7 +17,12 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
         <div className="accommodation">
             <h2>{title}</h2>
             <p>{location}</p>
-            <p>{tags.join(', ')}</p>
+            <div className="tags-container">
+                {tags.map((tag, index) => (
+                    <p key={index} className="tag">{tag}</p>
+                ))
+                }
+            </div>
             <p className='hostName'>{host.name}</p>
             <img src={host.picture} className='hostPicture' alt={host.name}/>
             <StarRating rating={parseFloat(rating)} />
