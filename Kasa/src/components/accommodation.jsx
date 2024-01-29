@@ -18,8 +18,7 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             <p>{tags.join(', ')}</p>
             <p className='hostName'>{host.name}</p>
             <img src={host.picture} alt={host.name}/>
-            <p>{rating}</p>
-            {/*  <StarRating/> */}
+            <StarRating rating={parseFloat(rating)} />
 
 
             {/* button to toggle visibility of description */}
