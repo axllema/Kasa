@@ -1,6 +1,7 @@
-// CollapseSection.jsx
 import React from 'react';
 import Collapse from './collapse';
+import arrowDown from '../assets/arrow_forward.png';
+import arrowUp from '../assets/arrow_back.png';
 import PropTypes from 'prop-types';
 
 // takes title, children, and className as props
@@ -10,22 +11,18 @@ const CollapseSection = ({ title, children, containerClassName, buttonClassName 
     const [buttonClicked, setButtonClicked] = React.useState(false);
 
     return (
-        <div className={`${containerClassName} ${buttonClicked ? 'clicked' : ''}`}>
-            {/* button to toggle the collapse state onClick */}
-            <button className={buttonClassName} onClick={() => {
-                setCollapsed(!collapsed);
-                setButtonClicked(!buttonClicked);
-            }}>
-                {/* ternary operator to display title or alternative text based on collapse state */}
-                {collapsed ? `${title}` : `${title}`}
-            </button>
-            {/* collapse component to conditionally render children based on collapse state */}
-            <Collapse isOpen={!collapsed}>
-                {children}
-            </Collapse>
-        </div>
-    );
-};
+            <div className={`${containerClassName} ${collapsed ? '' : 'clicked'}`}>
+         {/* button to toggle the collapse state onClick */}
+                <button className={buttonClassName} onClick={() => setCollapsed(!collapsed)}>
+                    {title}
+                    <img src={collapsed ? arrowDown : arrowUp} alt="Arrow" />
+                </button>
+                <Collapse isOpen={!collapsed}>
+                    {children}
+                </Collapse>
+            </div>
+        );
+    };
 
 // PropTypes to specify the expected types for each prop
 CollapseSection.propTypes = {
@@ -37,3 +34,4 @@ CollapseSection.propTypes = {
 };
 
 export default CollapseSection;
+

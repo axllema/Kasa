@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Collapse from '../components/collapse';
+import arrowDown from '../assets/arrow_forward.png';
+import arrowUp from '../assets/arrow_back.png';
 import StarRating from '../components/starRating';
 
 // defines the Accommodation component
@@ -22,23 +24,25 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
 
 
             {/* button to toggle visibility of description */}
-            <button onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
-                {descriptionCollapsed ? 'Description' : 'Description'}
+            <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
+                {descriptionCollapsed ? 'Description' : 'Description'}  <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
             </button>
             {/* collapse component to hide/show description */}
             <Collapse isOpen={!descriptionCollapsed}>
                 <p>{description}</p>
             </Collapse>
 
-            <button onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
-                {equipmentsCollapsed ? 'Équipements' : 'Équipements'}
+            <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
+                {equipmentsCollapsed ? 'Équipements' : 'Équipements'}  <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow"/>
             </button>
             <Collapse isOpen={!equipmentsCollapsed}>
                 <p>{equipments.join(', ')}</p>
             </Collapse>
-        </div>
+            </div>
     );
 };
+
+
 
 // PropTypes for the Accommodation component
 Accommodation.propTypes = {

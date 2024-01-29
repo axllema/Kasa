@@ -7,18 +7,22 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   /* background-color: #f6f6f6; */
     width: 1023px;
-    margin : 0 auto;
+    margin: 0 auto;
 
     &.clicked {
         background-color: #f6f6f6;
         height: 85px;
         padding-bottom: 35px;
+
+        .btn-about img {
+            transform: rotate(270deg);
+        }
     }
 }
 
 .btn-about {
+    display: flex;
     align-items: flex-start;
     background-color: #FF6060; 
     text-align: left;
@@ -27,9 +31,24 @@
     outline: none;
     padding: 10px;
     margin: 20px 0px 20px 0px;
-    width : 1023px;
+    width: 1023px;
     border-radius: 5px;
+
+    img {
+        width: 20px;
+        height: 25px;
+        margin-left: 10px;
+        transform: rotate(270deg);
+        transform-origin: center;
+        transition: transform 0.3s ease; 
+    }
+
+    &.clicked img {
+        transition: transform 0.8s ease;
+        transform: rotate(90deg);
+    }
 }
+
 
 p {
     display: flex;
