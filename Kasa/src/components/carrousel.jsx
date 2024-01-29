@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import arrowBack from '../assets/arrow_back.png'
+import arrowForward from '../assets/arrow_forward.png'
 import '../scss/components/_carrousel.scss';
 
 // defines the Carrousel component
@@ -27,15 +29,16 @@ const nextPicture = () => {
     // renders the Carrousel component with buttons to navigate between pictures
     return (
         <div className="carrousel">
-            <button className='carrousel__left_arrow' onClick={prevPicture}>&lt;</button>
+            <button className='carrousel__left_arrow' onClick={prevPicture}>
+                <img src={arrowBack} alt="" /> </button>
             {/* display the current picture */}
             {pictures.length > 0 && (
-                <img
+                <img className="carrousel__img"
                     src={pictures[currentPictureIndex]}
                     alt={`Slide ${currentPictureIndex}`}
                 />
             )}
-            <button  className='carrousel__right_arrow' onClick={nextPicture}>&gt;</button>
+            <button  className='carrousel__right_arrow' onClick={nextPicture}> <img src={arrowForward} alt=""/> </button>
         </div>
     );
 };

@@ -1,17 +1,46 @@
-
 .carrousel {
     position: relative;
+    height: 415px;
+    width: 100%;
+    padding: 30px 0 30px 0;
+    margin: 0 auto;
+    overflow: hidden;
 
     &__left_arrow {
         display: flex;
         position: absolute;
-        top: 230px;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 235px;
+        font-size: 50px;
+        color: white;
+        border: none;
+        outline: none;
+        background: none;
+        padding : 0;
+        cursor: pointer;
     }
 
     &__right_arrow {
         display: flex;
         position: absolute;
-        top: 230px;
-        right: 210px;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 250px;
+        font-size: 50px;
+        color: white;
+        border: none;
+        outline: none;
+        background: none;
+        padding : 0;
+        cursor: pointer;
+    }
+
+    &__img {
+        display: block;
+        height: inherit;
+        object-fit: cover;
+        width: 1080px;
+        margin: 0 auto;
     }
 }
