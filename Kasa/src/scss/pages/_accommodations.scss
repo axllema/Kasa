@@ -1,0 +1,11 @@
+h2 {
+    color: #FF6060;
+}
+
+p {
+    color: black;
+
+    &.hostName {
+        color: #FF6060;
+    }
+}

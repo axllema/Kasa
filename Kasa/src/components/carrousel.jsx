@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import '../scss/components/_carrousel.scss';
 
 // defines the Carrousel component
 const Carrousel = ({ pictures }) => {
@@ -25,8 +26,8 @@ const nextPicture = () => {
 
     // renders the Carrousel component with buttons to navigate between pictures
     return (
-        <div className="carousel">
-            <button onClick={prevPicture}>&lt;</button>
+        <div className="carrousel">
+            <button className='carrousel__left_arrow' onClick={prevPicture}>&lt;</button>
             {/* display the current picture */}
             {pictures.length > 0 && (
                 <img
@@ -34,7 +35,7 @@ const nextPicture = () => {
                     alt={`Slide ${currentPictureIndex}`}
                 />
             )}
-            <button onClick={nextPicture}>&gt;</button>
+            <button  className='carrousel__right_arrow' onClick={nextPicture}>&gt;</button>
         </div>
     );
 };

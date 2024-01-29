@@ -15,13 +15,13 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             <h2>{title}</h2>
             <p>{location}</p>
             <p>{tags.join(', ')}</p>
-            <p>{host.name}</p>
+            <p className='hostName'>{host.name}</p>
             <img src={host.picture} alt={host.name} />
             <p>{rating}</p>
 
             {/* button to toggle visibility of description */}
             <button onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
-                {descriptionCollapsed ? 'Description' : 'Hide Description'}
+                {descriptionCollapsed ? 'Description' : 'Description'}
             </button>
             {/* collapse component to hide/show description */}
             <Collapse isOpen={!descriptionCollapsed}>
@@ -29,7 +29,7 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             </Collapse>
 
             <button onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
-                {equipmentsCollapsed ? 'Équipements' : 'Hide Équipements'}
+                {equipmentsCollapsed ? 'Équipements' : 'Équipements'}
             </button>
             <Collapse isOpen={!equipmentsCollapsed}>
                 <p>{equipments.join(', ')}</p>

@@ -29,8 +29,6 @@ function AccommodationsPage() {
         return (
             <div>
                 <Header />
-                {/* displays the title of the selected accommodation */}
-                <h2>{selectedAccommodation.title}</h2>
                 {/* renders the Carrousel component with pictures from the selected accommodation */}
                 <Carrousel pictures={selectedAccommodation.pictures} />
                 {/* renders the Accommodation component with details from the selected accommodation */}
