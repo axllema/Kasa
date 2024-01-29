@@ -11,11 +11,11 @@ const StarRating = ({ rating }) => {
     return (
         <div className="star-rating">
         {/* uses Array to create an array with a length of 5, then map through it */}
-            {[...Array(5)].map((_, index) => (
-                <span key={index} className={index < filledStars ? 'filled' : 'empty'}>
+        {[...Array(5)].map((_, index) => (
+                <span key={index} className={`star ${index < filledStars ? 'filled' : ''}`}>
                 {/* displays filled star '★' if index is less than filledStars, otherwise empty star '☆' */}
-                {index < filledStars ? '★' : '☆'}
-                </span>
+                ★
+                    </span>
             ))
             }
         </div>
