@@ -16,31 +16,42 @@ p {
     width: 95px;
 }
 
-.description_button,
-.equipments_button {
+.accommodation {
     display: flex;
-    align-items: flex-start;
-    background-color: #FF6060; 
-    text-align: left;
-    color: white; 
-    border: none;
-    outline: none;
-    padding: 10px;
-    margin: 20px 0px 20px 0px;
-    width: 450px;
-    border-radius: 5px;
+    flex-direction: column;
 
-    img {
-        width: 20px;
-        height: 25px;
-        margin-left: 10px;
-        transform: rotate(270deg);
-        transform-origin: center;
-        transition: transform 0.3s ease; 
+    .buttons-container {
+        display: flex;
+        align-self: center;
+        gap: 200px;
     }
 
-    &.clicked img {
-        transition: transform 0.8s ease;
-        transform: rotate(90deg);
+    .description_button,
+    .equipments_button {
+        display: flex;
+        align-items: flex-start;
+        background-color: #FF6060; 
+        text-align: left;
+        color: white; 
+        border: none;
+        outline: none;
+        padding: 10px;
+        margin: 20px 0px;
+        width: 450px;
+        border-radius: 5px;
+
+        img {
+            width: 20px;
+            height: 25px;
+            margin-left: 10px;
+            transform: rotate(270deg);
+            transform-origin: center;
+            transition: transform 0.3s ease; 
+        }
+
+        &.clicked img {
+            transition: transform 0.8s ease;
+            transform: rotate(90deg);
+        }
     }
 }

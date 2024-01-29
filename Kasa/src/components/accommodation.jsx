@@ -22,27 +22,29 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             <img src={host.picture} className='hostPicture' alt={host.name}/>
             <StarRating rating={parseFloat(rating)} />
 
+            <div className="buttons-container">
+                {/* button to toggle visibility of description */}
+                <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
+                    {descriptionCollapsed ? 'Description' : 'Description'}  <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
+                </button>
 
-            {/* button to toggle visibility of description */}
-            <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
-                {descriptionCollapsed ? 'Description' : 'Description'}  <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
-            </button>
-            {/* collapse component to hide/show description */}
+                {/* button to toggle visibility of equipments */}
+                <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
+                    {equipmentsCollapsed ? 'Équipements' : 'Équipements'}  <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow"/>
+                </button>
+            </div>
+
+            {/* collapse components for description and equipments */}
             <Collapse isOpen={!descriptionCollapsed}>
                 <p>{description}</p>
             </Collapse>
 
-            <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
-                {equipmentsCollapsed ? 'Équipements' : 'Équipements'}  <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow"/>
-            </button>
             <Collapse isOpen={!equipmentsCollapsed}>
                 <p>{equipments.join(', ')}</p>
             </Collapse>
-            </div>
+        </div>
     );
 };
-
-
 
 // PropTypes for the Accommodation component
 Accommodation.propTypes = {
