@@ -9,7 +9,7 @@
     bottom: 0;
     z-index: 0;
     overflow: hidden;
-    background: #fff;
+    background: #FFFFFF;
 
 .loadingScreen__text {
     display: flex;
@@ -33,7 +33,7 @@
         &:nth-child(#{$i}) {
         $delayTime: 100 * $i + ms;
         display: inline-block;
-        animation-name: charColor;
+        animation-name: loaderColor;
         animation-iteration-count: infinite;
         animation-duration: 1s;
         animation-delay: $delayTime;
@@ -48,14 +48,14 @@
 }
 }
 
-@keyframes charColor {
+@keyframes loaderColor {
     0% {
-        color: lighten(#ddd, 46%);
+        color: lighten(#DDDDDD, 46%);
     }
     50% {
         color: #ff6060;
     }
     100% {
-        color: lighten(#ddd, 46%);
+        color: lighten(#DDDDDD, 46%);
     }
 }

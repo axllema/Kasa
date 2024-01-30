@@ -5,7 +5,8 @@
     font-weight: $weight;
 }
 
-/*  For "display : flex", so that there is less repetition
+/*  For "display : flex", so that there is less repetition */
+
 @mixin flex($direction: initial, $justify: initial, $align: initial, $gap: null) {
     display: flex;
     flex-direction: $direction;
@@ -13,6 +14,58 @@
     align-items: $align;
     gap: $gap;
 }
+
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* BORDER RADIUS */
+
+@mixin border-radius($radius: 5px) {
+    border-radius: $radius;
+}
+
+/* .custom-box {
+    @include border-radius(10px);
+    would change the border-radius 5px (default) to 10px !
+*/
+
+
+/* BOX SHADOW */
+
+@mixin box-shadow($x, $y, $blur, $color) {
+    box-shadow: $x $y $blur $color;
+}
+
+
+/* TRANSITION */
+
+@mixin transition($property: all, $duration: 0.3s, $timing-function: ease) {
+    transition: $property $duration $timing-function;
+}
+
+/* ROTATION 
+
+@mixin rotate($degrees) {
+    transform: rotate($degrees);
+}
+
+@mixin scale($factor) {
+    transform: scale($factor);
+}
+
+@mixin translate($x, $y) {
+    transform: translate($x, $y);
+}
+
+// Example usage:
+// .rotate-example {
+//   @include rotate(45deg);
+// }
+
 */
 
 /* Media Queries 
