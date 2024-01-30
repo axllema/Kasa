@@ -33,16 +33,22 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             </div>
 
             <div className="buttons-container">
-                {/* button to toggle visibility of description */}
-                <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
-                    {descriptionCollapsed ? 'Description' : 'Description'}  <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
-                </button>
+    {/* button to toggle visibility of description */}
+    <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
+        {descriptionCollapsed ? 'Description' : 'Description'}
+        <span>
+            <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
+        </span>
+    </button>
 
-                {/* button to toggle visibility of equipments */}
-                <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
-                    {equipmentsCollapsed ? 'Équipements' : 'Équipements'}  <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow"/>
-                </button>
-            </div>
+    {/* button to toggle visibility of equipments */}
+    <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
+        {equipmentsCollapsed ? 'Équipements' : 'Équipements'}
+        <span>
+            <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow" />
+        </span>
+    </button>
+</div>
 
             {/* collapse components for description and equipments */}
             <Collapse isOpen={!descriptionCollapsed}>
