@@ -15,15 +15,17 @@
         height: 85px;
         padding-bottom: 35px;
 
-        .btn-about img {
-            transform: rotate(270deg);
+        .btn-about {
+            img {
+                transform: rotate(90deg);
+            }
         }
     }
 }
 
 .btn-about {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     background-color: #FF6060; 
     text-align: left;
     color: white; 
@@ -37,9 +39,8 @@
     img {
         width: 20px;
         height: 25px;
-        margin-left: 10px;
+        margin-left: auto;
         transform: rotate(270deg);
-        transform-origin: center;
         transition: transform 0.3s ease; 
     }
 
@@ -49,13 +50,11 @@
     }
 }
 
-
 p {
     display: flex;
     align-items: center;
     text-align: left;
     font-size: 15px;
-    /* @include common-text-left; */
     color: #FF6060; 
     width: 1023px;
 }

@@ -23,9 +23,14 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
                 ))
                 }
             </div>
-            <p className='hostName'>{host.name}</p>
-            <img src={host.picture} className='hostPicture' alt={host.name}/>
-            <StarRating rating={parseFloat(rating)} />
+
+            <div className="host_infos">
+                <p className='host_infos__name'>{host.name}</p>
+                <img src={host.picture} className='host_infos__picture' alt={host.name}/>
+                    <div className="host_infos__rating">
+                        <StarRating rating={parseFloat(rating)} />
+                    </div>
+            </div>
 
             <div className="buttons-container">
                 {/* button to toggle visibility of description */}
