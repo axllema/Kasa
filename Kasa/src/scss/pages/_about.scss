@@ -13,13 +13,8 @@
     &.clicked {
         background-color: #f6f6f6;
         height: 85px;
-        padding-bottom: 35px;
-
-        .btn-about {
-            img {
-                transform: rotate(90deg);
-            }
-        }
+        padding-bottom: 45px;
+        margin-bottom: 30px;
     }
 }
 
@@ -29,6 +24,7 @@
     background-color: #FF6060; 
     text-align: left;
     color: white; 
+    font-weight: 500;
     border: none;
     outline: none;
     padding: 10px;
@@ -41,7 +37,8 @@
         height: 25px;
         margin-left: auto;
         transform: rotate(270deg);
-        transition: transform 0.3s ease; 
+        transform-origin: center;
+        transition: transform 0.3s ease;  
     }
 
     &.clicked img {
@@ -57,4 +54,6 @@ p {
     font-size: 15px;
     color: #FF6060; 
     width: 1023px;
+    margin-left: 26px;
+    width: 90%;
 }

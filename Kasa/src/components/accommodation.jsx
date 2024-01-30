@@ -4,6 +4,7 @@ import Collapse from '../components/collapse';
 import arrowDown from '../assets/arrow_forward.png';
 import arrowUp from '../assets/arrow_back.png';
 import StarRating from '../components/starRating';
+import CollapseSection from '../components/collapseSection';
 
 // defines the Accommodation component
 const Accommodation = ({ title, location, cover, tags, description, equipments, host, rating }) => {
@@ -15,8 +16,8 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
     // renders the Accommodation component with details and collapse buttons
     return (
         <div className="accommodation">
-            <h2>{title}</h2>
-            <p>{location}</p>
+            <h2 className='acc_infos'>{title}</h2>
+            <p className='acc_infos'>{location}</p>
             <div className="tags-container">
                 {tags.map((tag, index) => (
                     <p key={index} className="tag">{tag}</p>
@@ -33,32 +34,44 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
             </div>
 
             <div className="buttons-container">
-    {/* button to toggle visibility of description */}
-    <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
-        {descriptionCollapsed ? 'Description' : 'Description'}
-        <span>
-            <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
-        </span>
-    </button>
+                {/* button to toggle visibility of description */}
+                <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
+                    {descriptionCollapsed ? 'Description' : 'Description'}
+                    <span>
+                        <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
+                    </span>
+                </button>
 
-    {/* button to toggle visibility of equipments */}
-    <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
-        {equipmentsCollapsed ? 'Équipements' : 'Équipements'}
-        <span>
-            <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow" />
-        </span>
-    </button>
-</div>
+                {/* button to toggle visibility of equipments */}
+                <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
+                    {equipmentsCollapsed ? 'Équipements' : 'Équipements'}
+                    <span>
+                        <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow" />
+                    </span>
+                </button>
+            </div>
+
+
+            {/*  <div className="buttons-container">
+            <CollapseSection title="Description" containerClassName="description_button" buttonClassName="btn-about-bis">
+            <p>{description}</p>
+            </CollapseSection>
+
+            <CollapseSection title="Équipements" containerClassName="equipments_button" buttonClassName="btn-about-bis">
+            <p className='expand-text'>{equipments.join(', ')}</p>
+            </CollapseSection>
+            </div> */}
 
             {/* collapse components for description and equipments */}
             <Collapse isOpen={!descriptionCollapsed}>
-                <p>{description}</p>
+                <p className='aha'>{description}</p>
             </Collapse>
 
             <Collapse isOpen={!equipmentsCollapsed}>
-                <p>{equipments.join(', ')}</p>
+            <p className='aha'>{equipments.join(', ')}</p>
             </Collapse>
         </div>
+        
     );
 };
 

@@ -30,12 +30,14 @@ p {
     border-radius: 5px;
 }
 
-
-
 .accommodation {
     display: flex;
     flex-direction: column;
     margin: 0px 350px;
+
+.acc_infos {
+        margin : 0;
+    } 
 
     .buttons-container {
         display: flex;
@@ -82,6 +84,16 @@ p {
             transform: rotate(90deg);
         }
     }
+
+    .aha {
+        display: flex;
+        text-align: left;
+        font-size: 15px;
+        color: black;
+        width: 1023px;
+        margin-left: 0px;
+        padding-bottom: 60px;
+    }
 }
 
 .host_infos {
@@ -100,7 +112,7 @@ p {
         color: #FF6060;
         width: 50%;
         top: -120px;
-        left: -160px;
+        left: -185px;
     }
 
     &__picture {
