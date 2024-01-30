@@ -3,6 +3,7 @@ import * as React from 'react';
 import Header from '../components/header';
 import Banner from '../components/banner';
 import Gallery from '../components/gallery';
+import '../scss/style.scss'
 import Footer from '../components/footer';
 
 function Home() {

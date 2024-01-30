@@ -6,14 +6,17 @@
 }
 
 /*  For "display : flex", so that there is less repetition */
-
-@mixin flex($direction: initial, $justify: initial, $align: initial, $gap: null) {
+@mixin flex-container($direction: initial, $justify: initial, $align: initial, $gap: null) {
     display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
 }
+// Usage:
+//.buttons-container {
+// @include flex-container(row, space-between, center, 20px);
+//} 
 
 @mixin flex-center {
     display: flex;
@@ -22,33 +25,54 @@
 }
 
 
-/* BORDER RADIUS */
 
+/* TEXT */
+@mixin common-text-left {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    font-size: 15px;
+}
+
+/* BUTTONS */
+@mixin button_styles-about {
+    display: flex;
+    align-items: flex-start;
+    background-color: #FF6060; 
+    text-align: left;
+    color: white; 
+    border: none;
+    outline: none;
+    padding: 10px;
+    margin: 20px 0px;
+    width: 450px;
+    border-radius: 5px;
+}
+
+/* BORDER RADIUS */
 @mixin border-radius($radius: 5px) {
     border-radius: $radius;
 }
 
-/* .custom-box {
-    @include border-radius(10px);
-    would change the border-radius 5px (default) to 10px !
-*/
+// .custom-box {
+//   @include border-radius(10px);
+//  }
+// would change the border-radius 5px (default) to 10px !
+
 
 
 /* BOX SHADOW */
-
 @mixin box-shadow($x, $y, $blur, $color) {
     box-shadow: $x $y $blur $color;
 }
 
 
 /* TRANSITION */
-
 @mixin transition($property: all, $duration: 0.3s, $timing-function: ease) {
     transition: $property $duration $timing-function;
 }
 
-/* ROTATION 
-
+/* ROTATION */
 @mixin rotate($degrees) {
     transform: rotate($degrees);
 }
@@ -66,7 +90,7 @@
 //   @include rotate(45deg);
 // }
 
-*/
+
 
 /* Media Queries 
 @mixin mobile {
