@@ -11,21 +11,21 @@ const StarRating = ({ rating }) => {
 
     // renders the star rating
     return (
-            <div className="star-rating">
-              {[...Array(5)].map((_, index) => (
+        <div className="star-rating">
+            {[...Array(5)].map((_, index) => (
                 <img
-                  key={index}
-                  src={index < filledStars ? filledStar : emptyStar}
-                  alt={index < filledStars ? 'filled star' : 'empty star'}
-                  className="star"
+                key={index}
+                src={index < filledStars ? filledStar : emptyStar}
+                alt={index < filledStars ? 'filled star' : 'empty star'}
+                className="star"
                 />
-              ))}
-            </div>
-          );
+            ))}
+        </div>
+    );
         };
         
         StarRating.propTypes = {
-          rating: PropTypes.number.isRequired,
+            rating: PropTypes.number.isRequired,
         };
         
         export default StarRating;
