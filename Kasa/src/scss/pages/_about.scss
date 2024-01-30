@@ -16,6 +16,16 @@
         padding-bottom: 45px;
         margin-bottom: 30px;
     }
+
+    &__description {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 15px;
+        width: 1023px;
+        margin-left: 26px;
+        width: 90%;
+    }
 }
 
 .btn-about {
@@ -45,15 +55,4 @@
         transition: transform 0.8s ease;
         transform: rotate(90deg);
     }
-}
-
-p {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    font-size: 15px;
-    color: #FF6060; 
-    width: 1023px;
-    margin-left: 26px;
-    width: 90%;
 }
