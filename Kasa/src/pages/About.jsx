@@ -3,8 +3,8 @@ import Header from '../components/header';
 import Banner from '../components/banner';
 import CollapseSection from '../components/collapseSection';
 import Footer from '../components/footer';
-import '../scss/style.scss'
-import '../scss/pages/_about.scss'
+import '../scss/style.scss';
+import '../scss/pages/_about.scss';
 
 function About() {
     return (
