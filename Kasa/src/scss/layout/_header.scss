@@ -1,3 +1,5 @@
+@import '../../scss/utils/mixins';
+
 .header {
     display: flex;
     align-items: center;
@@ -6,9 +8,36 @@
     padding: 50px 110px;
     width: 90%;
     background-color: #FFFFFF;
+    text-transform: none;
+
+
+    @include mobile {
+        padding: 40px 35px;
+        margin: 0 0px 0 -15px;
+    }
+
+    @include tablet {
+    }
+
+    @include desktop {
+    }
+
+    @include desktop-large {
+        padding: 50px 110px;
+        width: 90%;
+    }
+
 
     img {
         height: 40px;
+
+        @include mobile {
+            height: 36px;
+        }
+
+        @include tablet {
+            height: 38px;
+        }
     }
 
     nav {
@@ -17,6 +46,28 @@
         font-size: 20px;
         color: black;
 
+        @include mobile {
+            font-size: 16px;
+            text-transform: uppercase;
+            gap: 13px;
+        }
+
+        @include tablet {
+            font-size: 18px;
+            text-transform: uppercase;
+            gap: 13px;
+        }
+
+        @include desktop {
+            text-transform: none;
+            font-size: 20px;
+        }
+
+        @include desktop-large {
+            text-transform: none;
+            font-size: 20px;
+        }
+
         a {
             text-decoration: none;
             color: black;
@@ -24,6 +75,22 @@
             &:hover {
                 color: #FF6060;
             }
+
+            @include mobile {
+                &:hover {
+                    color: black;
+                    text-decoration: underline;
+            }
+    
+            @include tablet {
+                &:hover {
+                    color: black;
+                    text-decoration: underline;
+            }
+        }
+    
         }
     }
+
+}
 }

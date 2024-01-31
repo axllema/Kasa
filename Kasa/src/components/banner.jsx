@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import banner_background from '../assets/banner_background.png';
 import banner_background_scnd from '../assets/banner_background-2.png';
 import '../scss/components/_banner.scss';
+import '../scss/style.scss'
 
 function Banner({ showSecond, showFirst }) {
     return (

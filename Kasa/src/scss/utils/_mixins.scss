@@ -90,7 +90,7 @@
 
 
 
-/* Media Queries 
+/* Media Queries */
 @mixin mobile {
     @media (min-width: 375px) {
         @content;
@@ -132,4 +132,3 @@
         @content;
     }
 }
-*/

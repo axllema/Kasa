@@ -1,3 +1,5 @@
+@import '../../scss/utils/mixins';
+
 .banner {
     display: flex;
     justify-content: center;
@@ -6,11 +8,32 @@
     margin: 0 auto;
     object-fit: fill;
 
+    @include mobile {
+        justify-content: flex-start;
+        margin: 0 0px 0 15px;
+    }
+
+    @include tablet {
+        justify-content: center;
+        height: 120px;
+    }
+
     img {
         border-radius: 30px;
         height: 190px;
         filter: brightness(50%);
         max-width: 1300px;
+
+        @include mobile {
+            border-radius: 10px;
+            height: 100px;
+            max-width: 95%;
+        }
+
+        @include tablet {
+            max-width: 95%;
+            height: 120px;
+        }
     }
 
     span {
@@ -21,5 +44,16 @@
         font-size: 30px;
         transform: translateY(-50%);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 08);
+
+        @include mobile {
+            font-size: 20px;
+            text-align: left;
+            margin-left: 15px;
+            max-width: 55%;
+        }
+
+        @include tablet {
+            font-size: 25px;
+        }
     }
 }
