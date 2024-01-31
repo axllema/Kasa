@@ -20,13 +20,9 @@
     }
 
     @include desktop {
-    }
-
-    @include desktop-large {
         padding: 50px 110px;
         width: 90%;
     }
-
 
     img {
         height: 40px;
@@ -86,6 +82,20 @@
                 &:hover {
                     color: black;
                     text-decoration: underline;
+            }
+        }
+
+        @include desktop {
+            &:hover {
+                color: #FF6060;
+                text-decoration: none;
+            }
+        }
+
+        @include desktop-large {
+            &:hover {
+                color: #FF6060;
+                text-decoration: none;
             }
         }
     

@@ -1,5 +1,15 @@
+@import '../../scss/utils/mixins';
+
 .first_container {
-    margin: 30px;
+    margin: 75px 30px 30px 30px;
+
+    @include mobile {
+        margin: 40px 20px 20px 20px;
+    }
+
+    @include desktop {
+        margin: 75px 30px 30px 30px;
+    }
 }
 
 .btn_container {
@@ -7,8 +17,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 1023px;
+    width: 100%;
     margin: 0 auto;
+
+    @include mobile {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    @include tablet {
+        width: 1023px;
+    }
 
     &.clicked {
         background-color: #f6f6f6;
@@ -34,13 +53,20 @@
     background-color: #FF6060; 
     text-align: left;
     color: white; 
+    font-size: 20px;
     font-weight: 500;
     border: none;
     outline: none;
     padding: 10px;
     margin: 20px 0px 20px 0px;
-    width: 1023px;
+    width: calc(100% - 40px);
     border-radius: 5px;
+
+    @include mobile {
+        margin: 20px 20px 20px 20px;
+        width: calc(100% - 40px); // Adjusted for mobile, considering 20px margin on both sides
+    }
+
 
     img {
         width: 20px;
@@ -49,6 +75,14 @@
         transform: rotate(270deg);
         transform-origin: center;
         transition: transform 0.3s ease;  
+
+        @include mobile {
+            margin-left: 185px;
+        }
+
+        @include desktop {
+            margin-left: auto;
+        }
     }
 
     &.clicked img {

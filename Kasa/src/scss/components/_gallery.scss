@@ -4,10 +4,27 @@
     display: flex;
     justify-content: center;
     background-color: #f6f6f6;
-    margin: 40px auto;
+    margin: 80px auto 30px auto;
     padding: 30px 0 30px 0;
     border-radius: 30px;
     max-width: 1300px;
+
+    @include mobile {
+        background-color: white;
+        margin: 15px auto;
+        padding: 30px 0 10px 0;
+    }
+
+    @include tablet {
+
+    }
+
+    @include desktop {
+        background-color: #f6f6f6;
+        margin: 80px auto 30px auto;
+        padding: 30px 0 20px 0;
+    
+    }
 }
 
 .gallery {
@@ -56,16 +73,6 @@
             }
         }
     }
-}
-
-    .gallery-container {
-    display: flex;
-    justify-content: center;
-    background-color: #f6f6f6;
-    margin: 40px auto;
-    padding: 30px 0 30px 0;
-    border-radius: 30px;
-    max-width: 1300px;
 }
 
 .orange-overlay {

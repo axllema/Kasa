@@ -18,11 +18,21 @@
         height: 120px;
     }
 
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        max-width: 1300px;
+        margin: 0 auto;
+        object-fit: fill;
+    }
+
     img {
         border-radius: 30px;
-        height: 190px;
+        height: 150px;
         filter: brightness(50%);
         max-width: 1300px;
+        width: 100%;
 
         @include mobile {
             border-radius: 10px;
@@ -33,6 +43,15 @@
         @include tablet {
             max-width: 95%;
             height: 120px;
+            width: 100%;
+        }
+
+        @include desktop {
+            border-radius: 30px;
+            filter: brightness(50%);
+            max-width: 1500px;
+            height: 175px;
+            width: 100%;
         }
     }
 
@@ -42,18 +61,30 @@
         color: white;
         font-weight: 500;
         font-size: 30px;
-        transform: translateY(-50%);
+        transform: translateY(0%);
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 08);
 
         @include mobile {
             font-size: 20px;
             text-align: left;
+            transform: translateY(-50%);
             margin-left: 15px;
             max-width: 55%;
         }
 
         @include tablet {
             font-size: 25px;
+            transform: translateY(50%);
+        }
+
+        @include desktop {
+            position: absolute;
+            top: 50%;
+            color: white;
+            transform: translateY(50%);
+            font-weight: 500;
+            font-size: 30px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 08);
         }
     }
 }
