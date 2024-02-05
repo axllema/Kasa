@@ -6,8 +6,9 @@ import '../scss/components/_gallery.scss';
 function Card({ id, title, cover }) {
     const navigate = useNavigate();
 
+    // function to navigate to the accommodation page when the card is clicked
     const handleClick = () => {
-    navigate(`/accommodations/${id}`);
+        navigate(`/accommodations/${id}`);
     };
 
     return (

@@ -24,71 +24,20 @@
     align-items: center;
 }
 
-/* TEXT */
-@mixin common-text-left {
-    display: flex;
-    align-items: center;
-    text-align: left;
-    font-size: 15px;
-}
-
-/* BUTTONS */
-@mixin button_styles-about {
-    display: flex;
-    align-items: flex-start;
-    background-color: #FF6060; 
-    text-align: left;
-    color: white; 
-    border: none;
-    outline: none;
-    padding: 10px;
-    margin: 20px 0px;
-    width: 450px;
-    border-radius: 5px;
-}
-
 /* BORDER RADIUS */
 @mixin border-radius($radius: 5px) {
     border-radius: $radius;
 }
-
-// .custom-box {
-//   @include border-radius(10px);
-//  }
-// would change the border-radius 5px (default) to 10px !
-
-
 
 /* BOX SHADOW */
 @mixin box-shadow($x, $y, $blur, $color) {
     box-shadow: $x $y $blur $color;
 }
 
-
 /* TRANSITION */
 @mixin transition($property: all, $duration: 0.3s, $timing-function: ease) {
     transition: $property $duration $timing-function;
 }
-
-/* ROTATION */
-@mixin rotate($degrees) {
-    transform: rotate($degrees);
-}
-
-@mixin scale($factor) {
-    transform: scale($factor);
-}
-
-@mixin translate($x, $y) {
-    transform: translate($x, $y);
-}
-
-// Example usage:
-// .rotate-example {
-//   @include rotate(45deg);
-// }
-
-
 
 /* Media Queries */
 @mixin mobile {

@@ -29,24 +29,24 @@
         filter: brightness(50%);
         border-radius: 15px;
 
-        @include tablet {
-            max-width: 95%;
-            height: 120px;
-            width: 100%;
-        }
+    @include tablet {
+        max-width: 95%;
+        height: 120px;
+        width: 100%;
+    }
 
-        @include desktop {
-            display: flex;
-            justify-content: center;
-            position: relative;
-            border-radius: 30px;
-            filter: brightness(50%);
-            max-width: 1500px;
-            height: 175px;
-            width: 100%;
-            margin: 0 auto;
-            object-fit: fill;
-        }
+    @include desktop {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        border-radius: 30px;
+        filter: brightness(50%);
+        max-width: 1500px;
+        height: 175px;
+        width: 100%;
+        margin: 0 auto;
+        object-fit: fill;
+    }
     }
 
     span {

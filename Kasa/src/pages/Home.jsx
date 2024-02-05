@@ -10,11 +10,11 @@ function Home() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        // Simulate an asynchronous operation (e.g., fetching data)
+        // simulates an asynchronous operation (e.g., fetching data)
         const fakeAsyncOperation = () => {
             setTimeout(() => {
-                setLoading(false); // Set loading to false after the operation is complete
-            }, 1500); // Simulated 2 seconds of loading
+                setLoading(false); // sets loading to false after the operation is complete
+            }, 1500); // simulates 2 seconds of loading
         };
 
         fakeAsyncOperation();

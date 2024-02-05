@@ -6,9 +6,10 @@ import '../scss/components/_gallery.scss';
 function CardsList() {
     return (
         <div className="gallery_list">
-        {accommodationsList.map(({ id, title, cover }) => (
-            <Card key={id} id={id} title={title} cover={cover} />
-    ))}
+            {/* maps through accommodationsList and rendering Card component for each item */}
+            {accommodationsList.map(({ id, title, cover }) => (
+                <Card key={id} id={id} title={title} cover={cover} />
+            ))}
     </div>
     );
 }

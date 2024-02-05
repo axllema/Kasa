@@ -9,7 +9,6 @@
     z-index: 10;
     overflow: hidden;
     background: #FFFFFF;
-
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.2s ease, visibility 0.2s ease;
@@ -44,23 +43,23 @@
         font-size: 60px;
     }
 
-.loadingScreen__text__span {
-    @for $i from 1 through 9 {
-        &:nth-child(#{$i}) {
-        $delayTime: 100 * $i + ms;
-        display: inline-block;
-        animation-name: loaderColor;
-        animation-iteration-count: infinite;
-        animation-delay: $delayTime;
-        animation-timing-function: ease;
-        animation-fill-mode: both;
-        backface-visibility: hidden;
-        animation-duration: 0.5s;
+    .loadingScreen__text__span {
+        @for $i from 1 through 9 {
+            &:nth-child(#{$i}) {
+            $delayTime: 100 * $i + ms;
+            display: inline-block;
+            animation-name: loaderColor;
+            animation-iteration-count: infinite;
+            animation-delay: $delayTime;
+            animation-timing-function: ease;
+            animation-fill-mode: both;
+            backface-visibility: hidden;
+            animation-duration: 0.5s;
+            }
         }
-    }
         padding: 5px;
         vertical-align: middle;
-}
+    }
 }
 }
 

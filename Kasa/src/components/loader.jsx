@@ -8,11 +8,11 @@ const Loader = ({ visible }) => {
     return (
         <div className={`loadingScreen ${visible ? 'visible' : ''}`}>
             <h3 className="loadingScreen__text">
-            {loadingText.map((val, index) => (
-                <span key={index} className="loadingScreen__text__span">
-                    {val}
-                </span>
-            ))}
+                {loadingText.map((val, index) => (
+                    <span key={index} className="loadingScreen__text__span">
+                        {val}
+                    </span>
+                ))}
             </h3>
         </div>
     );
