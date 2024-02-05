@@ -4,7 +4,6 @@ import Banner from '../components/banner';
 import CollapseSection from '../components/collapseSection';
 import Footer from '../components/footer';
 import '../scss/style.scss';
-/* import '../scss/pages/_about.scss'; */
 
 function About() {
     return (
@@ -13,7 +12,7 @@ function About() {
             <Banner showSecond={true} showFirst={false} />
 
             <div className='about_card'>
-                            <CollapseSection title="Fiabilité" containerClassName="btn_container" buttonClassName="btn-about"
+                            <CollapseSection title="Fiabilité" containerClassName="btn_container"
                             content=" Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations
                             sont régulièrement vérifiées par nos équipes.">
                             </CollapseSection>
