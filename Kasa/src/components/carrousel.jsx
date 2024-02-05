@@ -29,9 +29,6 @@ const nextPicture = () => {
     // renders the Carrousel component with buttons to navigate between pictures
     return (
         <div className="carrousel">
-        <button className="carrousel__left_arrow" onClick={prevPicture}>
-            <img src={arrowBack} alt="" />
-        </button>
         {pictures.length > 0 && (
             <>
             <div className="carrousel__img-container">
@@ -46,8 +43,11 @@ const nextPicture = () => {
             </div>
             </>
         )}
+        <button className="carrousel__left_arrow" onClick={prevPicture}>
+            &lt;
+        </button>
         <button className="carrousel__right_arrow" onClick={nextPicture}>
-            <img src={arrowForward} alt="" />
+            &gt;
         </button>
         </div>
     );

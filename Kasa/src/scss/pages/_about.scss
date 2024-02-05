@@ -1,10 +1,23 @@
 @import '../../scss/utils/mixins';
 
-.first_container {
-    margin: 40px 20px 20px 20px;
-
+.about_card {
+    align-items: normal;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    
     @include desktop {
-        margin: 75px 30px 30px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 3.5rem;
+        margin-bottom: 2.5rem;
+        margin-left : 0px;
+        margin-right: 5rem;
     }
 }
 
@@ -17,24 +30,15 @@
     justify-content: space-between;
     font-weight: 500;
 
-    /*   @include tablet {
-        width: 1023px;
-    }
-
+    
     @include desktop {
-        width: 70%;
-        margin: 0 auto;
-        padding-bottom: 0;
-    } */
-
-
-    &.clicked {
-    
-        @include tablet {
-        }
-    
-        @include desktop {
-        }
+        display: flex;
+        margin-top: 1.25rem;
+        margin-bottom: 1.25rem;
+        flex-direction: column;
+        gap: 1.25rem;
+        justify-content: space-between;
+        font-weight: 500;
     }
 
     &__description {
@@ -61,7 +65,7 @@
     }
 }
 
-.btn-about {
+/* .btn-about {
     display: flex;
     align-items: center;
     background-color: #FF6060; 
@@ -101,4 +105,4 @@
         transition: transform 0.8s ease;
         transform: rotate(90deg);
     }
-}
+} */

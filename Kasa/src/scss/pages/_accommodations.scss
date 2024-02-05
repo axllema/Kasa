@@ -4,37 +4,38 @@
     display: flex;
     margin: auto;
     flex-direction: column;
-    max-width: 1240px;
-
-
-  /*  @include mobile {
-        padding: 27px 20px 37px;
-        max-width: 768px;
-    }
+    max-width: 767px;
 
     @include desktop { 
-        margin: 0;
-        max-width: 1240px;
-        padding: 0px 20px;
-        width: 100%;
-    } */
-
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    max-width: 1240px;
+    } 
 
 .accommodation-card {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-    margin-top: 35px;
-    gap: 30px;
+    margin-bottom: 0;
+    margin-top: 0px;
+    gap: 10px;
+    padding: 0px 15px 0px 15px;
 
-
-   /*  &__infos-container {
-        align-items: flex-start;
+    @include tablet { 
         display: flex;
         flex-direction: row;
-        margin-bottom: 20px;
-        margin-top: 24px;
-        margin : 0;
-    } */
+        justify-content: space-between;
+        margin-top: 35px;
+        gap: 30px;
+    }
+    @include desktop { 
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 35px;
+        gap: 30px;
+    }
 
     &__acc_infos {
         display: flex;
@@ -51,8 +52,7 @@
         &__location {
             color: black;
             font-weight: 500;
-        }
-        
+        } 
     }
 
     &__tags-container {
@@ -85,12 +85,28 @@
     }
     
     &__host_infos {
-        color: #FF6060;
+        align-items: normal;
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 10px 0 10px 0;
+        color: #FF6060;
+        flex-direction: row-reverse;
+        gap: initial;
+        justify-content: space-between;
+        
+        @include tablet { 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 10px 0 10px 0;
+        }
+
+        @include desktop { 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+            margin: 10px 0 10px 0;
+        }
 
         &__important{
             display: flex;
@@ -109,8 +125,13 @@
 
         &__picture {
             border-radius: 50%;
-            height: 80px;
-            width: 80px;
+            height: 60px;
+            width: 60px;
+
+            @include desktop { 
+                height: 80px;
+                width: 80px;
+            }
         }
         
 
@@ -125,11 +146,28 @@
 
     .collapse_container {
         display: flex;
-        align-self: center;
-        gap: 175px;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 15px;
+        padding: 0px 15px 0px 15px;
+
+        @include tablet { 
+            display: flex;
+        }
+        
+        @include desktop { 
+            display: flex;
+            flex-direction: row;
+            align-self: center;
+            gap: 175px;
+        }
 
         .buttons-container{
-            padding-bottom: 30px;
+            padding-bottom: 0px;
+            
+            @include desktop { 
+                padding-bottom: 30px;
+            }
         }
 
         &__infos {
@@ -145,9 +183,21 @@
             outline: none;
             padding: 10px;
             margin: 20px 0px;
-            width: 475px;
+            width: 320px;
             border-radius: 5px; 
             transition: box-shadow 0.3s ease; 
+
+            @include tablet { 
+                width: 560px;
+            }
+
+            @include desktop { 
+                display: flex;
+                align-items: flex-start;
+                position: relative;
+                text-align: left;
+                width: 475px;
+            }
 
                 &:hover {
                     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -156,7 +206,17 @@
             img.arrowUp, img.arrowDown {
                 width: 20px;
                 height: 25px;
-                margin-left: 320px;
+                margin-left: 155px;
+
+                @include tablet { 
+                    margin-left: 405px;
+                }
+
+                @include desktop { 
+                    width: 20px;
+                    height: 25px;
+                    margin-left: 320px;
+                }
             }
 
         &_content {
@@ -168,7 +228,27 @@
             padding: 40px 37px 30px 15px;
             margin-top: -45px;
             margin-left: 0;
+            margin-bottom: 30px;
             width: 83%;
+            border-radius: 10px;
+
+
+            @include tablet { 
+                width: 72%;
+            }
+
+            @include desktop { 
+                display: flex;
+                text-align: left;
+                font-size: 15px;
+                background-color: #F6F6F6;
+                color: black;
+                padding: 40px 37px 30px 15px;
+                margin-top: -45px;
+                margin-left: 0;
+                width: 85%;
+            }
+    
         }
     }
 }

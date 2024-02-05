@@ -11,26 +11,26 @@
         background-color: #fff;
         padding: 40px 35px;
         margin: 0 0px 0 -15px;
-        max-width: 768px;
+        max-width: 370px;
         width: 100%;
-        
+
     @include tablet {
+        max-width: 745px;
     }
 
     @include desktop {
         display: flex;
-        align-items: normal;
         flex-direction: row;
         gap: initial;
         height: fit-content;
         justify-content: space-between;
+        align-items: center;
         margin: auto;
         background-color: #fff;
-        padding: 45px 20px 35px;
-        width: 100%;  
+        padding: 40px 35px;
+        width: 100%;
         max-width: 1240px;  
     }
-
 
     img {
         height: 36px;
