@@ -1,37 +1,54 @@
-import React from 'react';
-import Collapse from './collapse';
-import arrowDown from '../assets/arrow_forward.png';
-import arrowUp from '../assets/arrow_back.png';
+import React, { useState } from "react";
 import PropTypes from 'prop-types';
+import arrowUp from '../assets/arrow_up.png';
+import arrowDown from '../assets/arrow_up.png';
+import '../scss/components/_collapse.scss'; 
 
-// takes title, children, and className as props
-const CollapseSection = ({ title, children, containerClassName, buttonClassName }) => {
-    // state to track whether the section is collapsed or not
-    const [collapsed, setCollapsed] = React.useState(true);
-    const [buttonClicked, setButtonClicked] = React.useState(false);
+const CollapseSection = ({ title, content, containerClassName }) => {
+    const [toggle, setToggle] = useState(false);
 
     return (
-            <div className={`${containerClassName} ${collapsed ? '' : 'clicked'}`}>
-         {/* button to toggle the collapse state onClick */}
-                <button className={buttonClassName} onClick={() => setCollapsed(!collapsed)}>
-                    {title}
-                    <img src={collapsed ? arrowDown : arrowUp} alt="Arrow" />
-                </button>
-                <Collapse isOpen={!collapsed}>
-                    {children}
-                </Collapse>
+        <div className={`buttons-container`}>
+            <div
+                onClick={() => setToggle(!toggle)}
+                className={`${containerClassName} ${toggle ? 'clicked' : ''}`}
+            >
+                {title}
+                {toggle ? (
+                    <img
+                        className="arrowDown"
+                        src={arrowDown}
+                        alt="arrow down"
+                    />
+                ) : (
+                    <img
+                        className="arrowUp"
+                        src={arrowUp}
+                        alt="arrow up"
+                    />
+                )}
             </div>
-        );
-    };
 
-// PropTypes to specify the expected types for each prop
+            {toggle && (
+                <div className={`${containerClassName}_content`}>
+                    {Array.isArray(content) ? (
+                        content.map((item, index) => <p key={index}>{item}</p>)
+                    ) : (
+                        <p>{content}</p>
+                    )}
+                </div>
+            )}
+        </div>
+    );
+};
+
 CollapseSection.propTypes = {
-    title: PropTypes.string.isRequired, 
-    children: PropTypes.node.isRequired,
-    // adding these lines so we can add separate CSS classes for button and container
+    title: PropTypes.string.isRequired,
     containerClassName: PropTypes.string,
-    buttonClassName: PropTypes.string,
+    content: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.arrayOf(PropTypes.string)
+    ]).isRequired
 };
 
 export default CollapseSection;
-

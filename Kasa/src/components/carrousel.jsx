@@ -29,19 +29,29 @@ const nextPicture = () => {
     // renders the Carrousel component with buttons to navigate between pictures
     return (
         <div className="carrousel">
-            <button className='carrousel__left_arrow' onClick={prevPicture}>
-                <img src={arrowBack} alt="" /> </button>
-            {/* display the current picture */}
-            {pictures.length > 0 && (
-                <img className="carrousel__img"
-                    src={pictures[currentPictureIndex]}
-                    alt={`Slide ${currentPictureIndex}`}
+        <button className="carrousel__left_arrow" onClick={prevPicture}>
+            <img src={arrowBack} alt="" />
+        </button>
+        {pictures.length > 0 && (
+            <>
+            <div className="carrousel__img-container">
+                <img
+                className="carrousel__img"
+                src={pictures[currentPictureIndex]}
+                alt={`Slide ${currentPictureIndex + 1}`}
                 />
-            )}
-            <button  className='carrousel__right_arrow' onClick={nextPicture}> <img src={arrowForward} alt=""/> </button>
+                <div className="carrousel__counter">
+                {currentPictureIndex + 1}/{pictures.length}
+                </div>
+            </div>
+            </>
+        )}
+        <button className="carrousel__right_arrow" onClick={nextPicture}>
+            <img src={arrowForward} alt="" />
+        </button>
         </div>
     );
-};
+    };
 
 // PropTypes for the Carrousel component
 Carrousel.propTypes = {

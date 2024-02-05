@@ -48,10 +48,6 @@
             width: 340px;
             margin: 0 15px 30px 15px;
 
-            &:nth-last-child(-n + 2) {
-                margin-left: 0;
-            }
-
             @include mobile {
                 margin: 0 15px 10px 15px;
             }
@@ -85,8 +81,10 @@
     top: 0px;
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
+    transition: box-shadow 0.2s ease; 
 
     &:hover {
         opacity: 0.50;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 }

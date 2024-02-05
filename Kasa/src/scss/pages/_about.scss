@@ -1,11 +1,7 @@
 @import '../../scss/utils/mixins';
 
 .first_container {
-    margin: 75px 30px 30px 30px;
-
-    @include mobile {
-        margin: 40px 20px 20px 20px;
-    }
+    margin: 40px 20px 20px 20px;
 
     @include desktop {
         margin: 75px 30px 30px 30px;
@@ -14,36 +10,54 @@
 
 .btn_container {
     display: flex;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0 auto;
+    gap: 1.25rem;
+    justify-content: space-between;
+    font-weight: 500;
 
-    @include mobile {
-        width: 100%;
-        padding-bottom: 20px;
-    }
-
-    @include tablet {
+    /*   @include tablet {
         width: 1023px;
     }
 
+    @include desktop {
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 0;
+    } */
+
+
     &.clicked {
-        background-color: #f6f6f6;
-        height: 85px;
-        padding-bottom: 45px;
-        margin-bottom: 30px;
+    
+        @include tablet {
+        }
+    
+        @include desktop {
+        }
     }
 
     &__description {
         display: flex;
         align-items: center;
-        text-align: left;
-        font-size: 15px;
-        width: 1023px;
-        margin-left: 26px;
-        width: 90%;
+        width: 100%;
+        margin-top: 4px;
+
+        &__text {
+            text-align: left;
+            font-size: 15px;
+            line-height: 1.2em;
+            margin-left: 26px;
+        }
+
+        @include tablet {
+        }
+    
+        @include desktop {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
     }
 }
 
@@ -58,26 +72,24 @@
     border: none;
     outline: none;
     padding: 10px;
-    margin: 20px 0px 20px 0px;
-    width: calc(100% - 40px);
+    margin: 20px 20px 20px 20px;
+    width: calc(100% - 10px); 
     border-radius: 5px;
 
-    @include mobile {
-        margin: 20px 20px 20px 20px;
-        width: calc(100% - 40px); // Adjusted for mobile, considering 20px margin on both sides
+    @include desktop {
+        margin: 20px 0px 20px 0px;
+        width: calc(100% - 40px);
     }
-
 
     img {
         width: 20px;
         height: 25px;
-        margin-left: auto;
+        margin-left: 185px;
         transform: rotate(270deg);
         transform-origin: center;
         transition: transform 0.3s ease;  
 
-        @include mobile {
-            margin-left: 185px;
+        @include tablet {
         }
 
         @include desktop {

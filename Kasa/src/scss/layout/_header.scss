@@ -2,50 +2,58 @@
 
 .header {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    padding: 50px 110px;
-    width: 90%;
-    background-color: #FFFFFF;
-    text-transform: none;
-
-    @include mobile {
+        flex-direction: row;
+        gap: initial;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+        margin: auto;
+        background-color: #fff;
         padding: 40px 35px;
         margin: 0 0px 0 -15px;
-    }
-
+        max-width: 768px;
+        width: 100%;
+        
     @include tablet {
     }
 
     @include desktop {
-        padding: 50px 110px;
-        width: 90%;
+        display: flex;
+        align-items: normal;
+        flex-direction: row;
+        gap: initial;
+        height: fit-content;
+        justify-content: space-between;
+        margin: auto;
+        background-color: #fff;
+        padding: 45px 20px 35px;
+        width: 100%;  
+        max-width: 1240px;  
     }
 
-    img {
-        height: 40px;
 
-        @include mobile {
-            height: 36px;
-        }
+    img {
+        height: 36px;
+        align-self: center;
+        text-align: center;
 
         @include tablet {
             height: 38px;
         }
+
+        @include desktop {
+            height: 40px;
+        }
+
     }
 
     nav {
         display: flex;
-        gap: 20px;
-        font-size: 20px;
-        color: black;
-
-        @include mobile {
-            font-size: 16px;
-            text-transform: uppercase;
-            gap: 13px;
-        }
+        align-self: center;
+        text-align: center;
+        gap: 13px;
+        font-size: 16px;
+        text-transform: uppercase;
 
         @include tablet {
             font-size: 18px;
@@ -54,13 +62,13 @@
         }
 
         @include desktop {
-            text-transform: none;
+            text-transform: capitalize;
+            gap: 20px;
             font-size: 20px;
+            color: black;
         }
 
         @include desktop-large {
-            text-transform: none;
-            font-size: 20px;
         }
 
         a {
@@ -68,36 +76,33 @@
             color: black;
 
             &:hover {
-                color: #FF6060;
-            }
-
-            @include mobile {
-                &:hover {
-                    color: black;
+                color: black;
                     text-decoration: underline;
             }
-    
+
             @include tablet {
                 &:hover {
                     color: black;
                     text-decoration: underline;
-            }
-        }
+                } 
 
-        @include desktop {
-            &:hover {
-                color: #FF6060;
+            @include desktop {
                 text-decoration: none;
-            }
-        }
+                color: black;
 
-        @include desktop-large {
-            &:hover {
-                color: #FF6060;
-                text-decoration: none;
+                &:hover {
+                    color: #FF6060;
+                    text-decoration: none;
+                }
             }
-        }
     
+            @include desktop-large {
+                &:hover {
+                    color: #FF6060;
+                    text-decoration: none;
+                }
+            }
+
         }
     }
 

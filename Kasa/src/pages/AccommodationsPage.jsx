@@ -31,19 +31,21 @@ function AccommodationsPage() {
         return (
             <div>
                 <Header />
-                {/* renders the Carrousel component with pictures from the selected accommodation */}
-                <Carrousel pictures={selectedAccommodation.pictures} />
-                {/* renders the Accommodation component with details from the selected accommodation */}
-                <Accommodation
-                    title={selectedAccommodation.title}
-                    cover={selectedAccommodation.cover}
-                    tags={selectedAccommodation.tags}
-                    description={selectedAccommodation.description}
-                    equipments={selectedAccommodation.equipments}
-                    host={selectedAccommodation.host}
-                    rating={selectedAccommodation.rating}
-                    location={selectedAccommodation.location}
-                />
+                <div className="accommodation_page" >
+                    {/* renders the Carrousel component with pictures from the selected accommodation */}
+                    <Carrousel pictures={selectedAccommodation.pictures} />
+                    {/* renders the Accommodation component with details from the selected accommodation */}
+                    <Accommodation
+                        title={selectedAccommodation.title}
+                        cover={selectedAccommodation.cover}
+                        tags={selectedAccommodation.tags}
+                        description={selectedAccommodation.description}
+                        equipments={selectedAccommodation.equipments}
+                        host={selectedAccommodation.host}
+                        rating={selectedAccommodation.rating}
+                        location={selectedAccommodation.location}
+                    />
+                </div>
                 <Footer />
             </div>
         );

@@ -1,77 +1,60 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import Collapse from '../components/collapse';
-import arrowDown from '../assets/arrow_forward.png';
-import arrowUp from '../assets/arrow_back.png';
-import StarRating from '../components/starRating';
 import CollapseSection from '../components/collapseSection';
+import StarRating from '../components/starRating';
+import '../scss/components/_collapse.scss';
 
-// defines the Accommodation component
+// Defines the Accommodation component
 const Accommodation = ({ title, location, cover, tags, description, equipments, host, rating }) => {
-    // states to track whether description is collapsed or not
+    // States to track whether description is collapsed or not
     const [descriptionCollapsed, setDescriptionCollapsed] = useState(true);
-    // states to track whether equipments are collapsed or not
+    // States to track whether equipments are collapsed or not
     const [equipmentsCollapsed, setEquipmentsCollapsed] = useState(true);
 
-    // renders the Accommodation component with details and collapse buttons
+    // Renders the Accommodation component with details and collapse buttons
     return (
-        <div className="accommodation">
-            <h2 className='acc_infos'>{title}</h2>
-            <p className='acc_infos'>{location}</p>
-            <div className="tags-container">
-                {tags.map((tag, index) => (
-                    <p key={index} className="tag">{tag}</p>
-                ))
-                }
-            </div>
+        <div>
+            <div className="accommodation-card">
+            {/* <div className="accommodation-card__infos-container"> */}
 
-            <div className="host_infos">
-                <p className='host_infos__name'>{host.name}</p>
-                <img src={host.picture} className='host_infos__picture' alt={host.name}/>
-                    <div className="host_infos__rating">
-                        <StarRating rating={parseFloat(rating)} />
+                    <div className="accommodation-card__acc_infos">
+                        <h2 className='accommodation-card__acc_infos__title'>{title}</h2>
+                        <p className='accommodation-card__acc_infos__location'>{location}</p>
+
+                        <ul className="accommodation-card__tags-container">
+                            {tags.map((tag, index) => (
+                                <li key={index} className="tag">{tag}</li>
+                            ))}
+                        </ul>
                     </div>
+
+                    <div className="accommodation-card__host_infos">
+                        <div className="accommodation-card__host_infos__important">
+                            <p className='accommodation-card__host_infos__name'>{host.name}</p>
+                            <img src={host.picture} className='accommodation-card__host_infos__picture' alt={host.name} />
+                        </div>
+                        <div className="accommodation-card__host_infos__rating">
+                        <StarRating rating={parseFloat(rating)} />
+                        </div>
+                    </div>
+              {/*  </div> */}
+
             </div>
 
-            <div className="buttons-container">
-                {/* button to toggle visibility of description */}
-                <button className="description_button" onClick={() => setDescriptionCollapsed(!descriptionCollapsed)}>
-                    {descriptionCollapsed ? 'Description' : 'Description'}
-                    <span>
-                        <img src={descriptionCollapsed ? arrowDown : arrowUp} alt="Arrow" />
-                    </span>
-                </button>
-
-                {/* button to toggle visibility of equipments */}
-                <button className="equipments_button" onClick={() => setEquipmentsCollapsed(!equipmentsCollapsed)}>
-                    {equipmentsCollapsed ? 'Équipements' : 'Équipements'}
-                    <span>
-                        <img src={equipmentsCollapsed ? arrowDown : arrowUp} alt="Arrow" />
-                    </span>
-                </button>
-            </div>
-
-
-            {/*  <div className="buttons-container">
-            <CollapseSection title="Description" containerClassName="description_button" buttonClassName="btn-about-bis">
-            <p>{description}</p>
-            </CollapseSection>
-
-            <CollapseSection title="Équipements" containerClassName="equipments_button" buttonClassName="btn-about-bis">
-            <p className='expand-text'>{equipments.join(', ')}</p>
-            </CollapseSection>
-            </div> */}
-
-            {/* collapse components for description and equipments */}
-            <Collapse isOpen={!descriptionCollapsed}>
-                <p className='aha'>{description}</p>
-            </Collapse>
-
-            <Collapse isOpen={!equipmentsCollapsed}>
-            <p className='aha'>{equipments.join(', ')}</p>
-            </Collapse>
+                <div className="collapse_container">
+                    <CollapseSection
+                        title="Description"
+                        containerClassName="collapse_container__infos"
+                        content={description}
+                    />
+                    
+                    <CollapseSection
+                        title="Équipements"
+                        containerClassName="collapse_container__infos"
+                        content={equipments.join(', ')}
+                    />
+                </div>
         </div>
-        
     );
 };
 

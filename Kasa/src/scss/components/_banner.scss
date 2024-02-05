@@ -2,16 +2,11 @@
 
 .banner {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     position: relative;
     max-width: 1300px;
-    margin: 0 auto;
+    margin: 0 0px 0 15px;
     object-fit: fill;
-
-    @include mobile {
-        justify-content: flex-start;
-        margin: 0 0px 0 15px;
-    }
 
     @include tablet {
         justify-content: center;
@@ -28,17 +23,11 @@
     }
 
     img {
+        border-radius: 10px;
+        height: 100px;
+        max-width: 95%;
         border-radius: 30px;
-        height: 150px;
         filter: brightness(50%);
-        max-width: 1300px;
-        width: 100%;
-
-        @include mobile {
-            border-radius: 10px;
-            height: 100px;
-            max-width: 95%;
-        }
 
         @include tablet {
             max-width: 95%;
@@ -60,17 +49,12 @@
         top: 50%;
         color: white;
         font-weight: 500;
-        font-size: 30px;
-        transform: translateY(0%);
+        font-size: 20px;
+        text-align: left;
+        transform: translateY(-50%);
+        margin-left: 15px;
         text-shadow: 2px 2px 5px rgba(0, 0, 0, 08);
-
-        @include mobile {
-            font-size: 20px;
-            text-align: left;
-            transform: translateY(-50%);
-            margin-left: 15px;
-            max-width: 55%;
-        }
+        max-width: 55%;
 
         @include tablet {
             font-size: 25px;
@@ -78,13 +62,7 @@
         }
 
         @include desktop {
-            position: absolute;
-            top: 50%;
-            color: white;
-            transform: translateY(50%);
-            font-weight: 500;
             font-size: 30px;
-            text-shadow: 2px 2px 5px rgba(0, 0, 0, 08);
         }
     }
 }
