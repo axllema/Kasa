@@ -14,7 +14,7 @@ function Home() {
         const fakeAsyncOperation = () => {
             setTimeout(() => {
                 setLoading(false); // Set loading to false after the operation is complete
-            }, 2000); // Simulated 2 seconds of loading
+            }, 1500); // Simulated 2 seconds of loading
         };
 
         fakeAsyncOperation();

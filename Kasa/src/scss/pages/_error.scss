@@ -1,3 +1,6 @@
+@import '../../scss/utils/mixins';
+
+
 .error {
     display: flex;
     flex-direction: column;
@@ -7,20 +10,58 @@
     width: 100%;
     background-color: #FFFFFF;
     color: #FF6060;
+    padding: 15px 35px;
+    box-sizing: border-box;  
 
-    h2 {
-        font-size: 250px;
-        font-weight: 700;
-        padding-bottom: 80px;
+    @include tablet {
     }
 
-    .error_text{
-        font-size: 36px;
+    @include desktop {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        width: 100%;
+        background-color: #FFFFFF;
+        color: #FF6060;
+    }
+
+    h2 {
+        font-size: 130px;
+        font-weight: 700;
         padding-bottom: 80px;
+
+        @include tablet {
+            font-size: 150px;
+            font-size: 200px;
+        }
+    
+        @include desktop {
+            font-size: 250px;
+        }
+    
+    }
+
+    .error_text {
+        text-align: center;
+        font-size: 22px;
+        padding-bottom: 80px;
+
+        @include tablet {
+            font-size: 25px;
+        }
+    
+        @include desktop {
+            text-align: left;
+            font-size: 36px;
+            padding-bottom: 80px;
+        }
     }
 
     .error_return {
         text-align: center;
+        color: black;
         font-size: 15px;
         padding-bottom: 130px;
         text-decoration: underline;

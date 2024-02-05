@@ -29,6 +29,8 @@ const CollapseSection = ({ title, content, containerClassName }) => {
                 )}
             </div>
 
+              {/*  A REVOIR !! */}
+
             {toggle && (
                 <div className={`${containerClassName}_content`}>
                     {Array.isArray(content) ? (

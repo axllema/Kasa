@@ -173,6 +173,7 @@
         &__infos {
             display: flex;
             align-items: flex-start;
+            justify-content: space-between;
             position: relative;
             background-color: #FF6060; 
             text-align: left;
@@ -207,6 +208,7 @@
                 width: 20px;
                 height: 25px;
                 margin-left: 155px;
+                align-self: center;
 
                 @include tablet { 
                     margin-left: 405px;

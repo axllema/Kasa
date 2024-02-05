@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import arrowBack from '../assets/arrow_back.png'
-import arrowForward from '../assets/arrow_forward.png'
 import '../scss/components/_carrousel.scss';
 
 // defines the Carrousel component
