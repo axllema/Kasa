@@ -29,8 +29,8 @@ const CollapseSection = ({ title, content, containerClassName }) => {
                 )}
             </div>
 
-              {/*  A REVOIR !! */}
-
+            {/*   if equipments is an array, it will render each item in a separate paragraph. 
+            if it's a string, it will still render it as a single paragraph. */}
             {toggle && (
                 <div className={`${containerClassName}_content`}>
                     {Array.isArray(content) ? (

@@ -51,7 +51,7 @@ const Accommodation = ({ title, location, cover, tags, description, equipments, 
                     <CollapseSection
                         title="Équipements"
                         containerClassName="collapse_container__infos"
-                        content={equipments.join(', ')}
+                        content={equipments}
                     />
                 </div>
         </div>

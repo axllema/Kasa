@@ -223,6 +223,7 @@
 
         &_content {
             display: flex;
+            flex-direction: column;
             text-align: left;
             font-size: 15px;
             background-color: #F6F6F6;
