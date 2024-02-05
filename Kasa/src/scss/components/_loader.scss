@@ -7,9 +7,18 @@
     right: 0;
     top: 0;
     bottom: 0;
-    z-index: 0;
+    z-index: 10;
     overflow: hidden;
     background: #FFFFFF;
+
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+
+    &.visible{
+        opacity: 1;
+        visibility: visible;
+    }
 
 .loadingScreen__text {
     display: flex;
@@ -35,15 +44,15 @@
         display: inline-block;
         animation-name: loaderColor;
         animation-iteration-count: infinite;
-        animation-duration: 1s;
         animation-delay: $delayTime;
         animation-timing-function: ease;
         animation-fill-mode: both;
         backface-visibility: hidden;
+        animation-duration: 0.5s;
         }
     }
-    padding: 5px;
-    vertical-align: middle;
+        padding: 5px;
+        vertical-align: middle;
 }
 }
 }
