@@ -1,14 +1,12 @@
+@import '../../scss/utils/variables';
 @import '../../scss/utils/mixins';
 
 .header {
-    display: flex;
-        flex-direction: row;
+    @include flex-container(row, space-between, center, initial);
         gap: initial;
         height: fit-content;
-        justify-content: space-between;
-        align-items: center;
         margin: auto;
-        background-color: #fff;
+        background-color: $white-color;
         padding: 40px 35px;
         margin: 0 0px 0 -15px;
         max-width: 370px;
@@ -92,14 +90,14 @@
                 color: black;
 
                 &:hover {
-                    color: #FF6060;
+                    color: $orange-color;
                     text-decoration: none;
                 }
             }
     
             @include desktop-large {
                 &:hover {
-                    color: #FF6060;
+                    color: $orange-color;
                     text-decoration: none;
                 }
             }

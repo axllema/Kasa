@@ -23,7 +23,7 @@
     }
 
     img {
-        border-radius: 10px;
+        @include border-radius;
         height: 125px;
         max-width: 95%;
         filter: brightness(50%);
@@ -36,9 +36,7 @@
     }
 
     @include desktop {
-        display: flex;
-        justify-content: center;
-        position: relative;
+        @include flex-center;
         border-radius: 30px;
         filter: brightness(50%);
         max-width: 1500px;

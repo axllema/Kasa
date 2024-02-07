@@ -1,9 +1,9 @@
+@import '../../scss/utils/variables';
 @import '../../scss/utils/mixins';
 
 .accommodation_page {
-    display: flex;
+    @include flex-container(column, initial, initial, initial);
     margin: auto;
-    flex-direction: column;
     max-width: 767px;
 
     @include desktop { 
@@ -14,111 +14,89 @@
     } 
 
     .accommodation-card {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
+        @include flex-container(column, initial, space-between, initial);
         margin-bottom: 0;
         margin-top: 0px;
         gap: 10px;
         padding: 0px 15px 0px 15px;
 
     @include tablet { 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex-container(row, space-between, initial, 30px);
         margin-top: 35px;
         gap: 30px;
     }
 
     @include desktop { 
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
+        @include flex-container(row, space-between, initial, 30px);
         margin-top: 35px;
         gap: 30px;
     }
 
     &__acc_infos {
-        display: flex;
-        flex-direction: column;
+        @include flex-container(column, initial, initial, 5px);
         margin: 0;
         gap : 5px;
 
     &__title {
-        font-size: 30px;
-        color: #FF6060;
-        font-weight: 500;
+        @include typography($size: 30px, $weight: $semi-bold);
+        color: $orange-color;
     }
     
     &__location {
         color: black;
-        font-weight: 500;
+        font-weight: $semi-bold;
     } 
     }
 
     &__tags-container {
-        display: flex;
-        white-space: nowrap;
-        gap: 10px;
+        @include flex-container(row, initial, initial, 10px);
 
     .tag {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #FF6060;
-        color: white; 
+        @include flex-center;
+        background-color: $orange-color;
+        color: $white-color; 
         text-align: center; 
         font-size: 12px;
-        font-weight: 500;
+        font-weight: $semi-bold;
         border: none;
         outline: none;
         padding: 12px;
         margin: 20px 0px;
         width: 95px;
         height: 15px;
-        border-radius: 5px;
-        transition: box-shadow 0.3s ease; 
+        @include border-radius;
+        @include transition(box-shadow 0.3s ease);
 
             &:hover {
-                box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                @include box-shadow(0, 0, 10px, rgba(0, 0, 0, 0.5));
             }
         }
     }
     
     &__host_infos {
-        align-items: normal;
-        display: flex;
-        color: #FF6060;
-        flex-direction: row-reverse;
+        @include flex-container(row-reverse, initial, center, initial);
+        color: $orange-color;
         gap: initial;
         justify-content: space-between;
         
     @include tablet { 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 10px 0 10px 0;
+        @include flex-container(column, flex-end, center, initial);
+        margin: 10px 0;
     }
 
     @include desktop { 
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        margin: 10px 0 10px 0;
+        @include flex-container(column, flex-end, center, initial);
+        margin: 10px 0;
     }
 
     &__important{
-        display: flex;
-        align-items: center;
+        @include flex-center;
     }
 
     &__name {
-        color: #FF6060;
+        color: $orange-color;
+        @include typography($size: 15px, $weight: $semi-bold);
         text-align: right;
-        font-size: 15px;
-        font-weight: 500;
         width: 50%;
         margin-right: 10px;
         line-height: 18px;
@@ -135,32 +113,23 @@
         }
     }
         
-
     &__rating {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-container(row, space-between, center, initial);
     padding: 15px 0 15px 0; 
     }
     }
 }
 
     .collapse_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 15px;
+        @include flex-container(column, initial, space-between, 15px);
         padding: 0px 15px 0px 15px;
 
     @include tablet { 
-        display: flex;
+        @include flex-container(row, initial, initial, initial);
     }
     
     @include desktop { 
-        display: flex;
-        flex-direction: row;
-        align-self: center;
-        gap: 175px;
+        @include flex-container(row, initial, center, 175px);
     }
 
     .buttons-container{
@@ -176,18 +145,17 @@
         align-items: flex-start;
         justify-content: space-between;
         position: relative;
-        background-color: #FF6060; 
+        background-color: $orange-color; 
+        color: $white-color;
         text-align: left;
-        font-size: 20px;
-        font-weight: 500;
-        color: white; 
+        @include typography($size: 20px, $weight: $semi-bold);
         border: none;
         outline: none;
         padding: 10px;
         margin: 20px 0px;
         width: 320px;
-        border-radius: 5px; 
-        transition: box-shadow 0.3s ease; 
+        @include border-radius;
+        @include transition(box-shadow 0.3s ease);
 
     @include tablet { 
         width: 560px;
@@ -202,7 +170,7 @@
     }
 
         &:hover {
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            @include box-shadow(0, 0, 10px, rgba(0, 0, 0, 0.5));
         }
 
     img.arrowUp, img.arrowDown {
@@ -216,25 +184,21 @@
     }
 
     @include desktop { 
-        width: 20px;
-        height: 25px;
         margin-left: 320px;
     }
     }
 
     &_content {
-        display: flex;
-        flex-direction: column;
-        text-align: left;
-        font-size: 15px;
-        background-color: #F6F6F6;
+        @include flex-container(column, initial, initial, initial);
+        @include typography($size: 15px);
+        background-color: $lightgrey-color;
         color: black;
         padding: 40px 37px 30px 15px;
         margin-top: -45px;
         margin-left: 0;
         margin-bottom: 30px;
         width: 83%;
-        border-radius: 10px;
+        @include border-radius($radius : 10px);
 
 
     @include tablet { 
@@ -242,18 +206,9 @@
     }
 
     @include desktop { 
-        display: flex;
-        text-align: left;
-        font-size: 15px;
-        background-color: #F6F6F6;
-        color: black;
-        padding: 40px 37px 30px 15px;
-        margin-top: -45px;
-        margin-left: 0;
         width: 85%;
     }
     }
     }
 }
-
 }
