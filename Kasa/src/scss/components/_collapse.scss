@@ -16,7 +16,7 @@
     color: $white-color;
     background-color: $orange-color;
     padding: 1rem;
-    height: 14px;
+    height: 5px;
     width: calc(80% - 10px);
     border-radius: 10px;
     overflow: hidden;
@@ -81,7 +81,7 @@ img.arrowDown {
     width: 20px;
     height: 25px;
     margin-left: 10px;
-    transition-duration: 400ms;
+    transition-duration:400ms;
 }
 
 img.arrowUp {
@@ -90,6 +90,5 @@ img.arrowUp {
 
 img.arrowDown {
     transition-duration: 400ms;
-    transform: rotate(180deg);
-    transition-duration: 400ms;
+    transform: rotate(-180deg); 
 }
