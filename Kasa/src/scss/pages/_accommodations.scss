@@ -125,11 +125,11 @@
         padding: 0px 15px 0px 15px;
 
     @include tablet { 
-        @include flex-container(row, initial, initial, initial);
+        @include flex-container(column, initial, space-between, 15px);
     }
     
     @include desktop { 
-        @include flex-container(row, initial, center, 175px);
+        @include flex-container(row, initial, flex-start, 175px);
     }
 
     .buttons-container{
